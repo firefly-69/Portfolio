@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     background-color: black;
 }
@@ -62,7 +66,7 @@ a:hover{
     height: 150px;
     width: 750px;
     padding: 0;
-    margin: 200px 0 0 200px;
+    margin: 320px 0 0 200px;
 }
 
 .i-am{
@@ -89,7 +93,7 @@ a:hover{
     padding: 20px;
     height: 200px;
     width: 1200px;
-    margin: 0 0 0 200px;
+    margin:0 0 0 200px;
 }
 
 .cent-desc{
@@ -99,4 +103,100 @@ a:hover{
     font-weight: 200;
     letter-spacing: 1px;
     line-height: 25px;
+}
+
+.contacts{
+    margin: 500px 0 100px 300px;
+    width: 1200px;
+    height: 120px;
+    background-color: none;
+}
+
+button{
+    width: 280px;
+    height: 80px;
+    background-color: black;
+    color: rgb(240, 240, 240);
+    text-decoration: none;
+    font-family: "Inter", sans-serif;
+    font-weight:bolder;
+    font-size: 20px;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    position: relative;
+    border-radius: 15px;
+    border: none;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+button::after, button::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #9845E8, #33D2FF, #DD5789, #9845E8);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 4px;
+    border-radius: 15px;
+    animation: spin 3s linear infinite;
+}
+
+button::before{
+    filter: blur(0.8rem);
+    opacity: 0.5;
+}
+
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+.button-all{
+    padding: 20px 10px 20px 10px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 30px;
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:hover span {
+  padding-right: 25px;
+}
+
+button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+button a, button a:hover{
+    color: white;
 }
