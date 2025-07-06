@@ -82,6 +82,7 @@ a:hover{
     background: linear-gradient(to right, #9845E8, #33D2FF, #DD5789);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .center-desc{
