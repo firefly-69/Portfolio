@@ -141,14 +141,14 @@ button::after, button::before{
     content: '';
     height: 100%;
     width: 100%;
-    background-image: conic-gradient(from var(--angle), #9845E8, #33D2FF, #DD5789, #9845E8);
+    background-image: conic-gradient(from var(--angle), transparent 45%, #9845E8, #33D2FF);
     top: 50%;
     left: 50%;
     translate: -50% -50%;
     z-index: -1;
     padding: 4px;
     border-radius: 15px;
-    animation: spin 3s linear infinite;
+    animation: spin 6s linear infinite;
 }
 
 button::before{
