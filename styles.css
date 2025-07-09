@@ -13,6 +13,7 @@ html{
 }
 
 body{
+    height: 100vh;
     width: 100%;
     background-color: black;
 }
@@ -20,7 +21,7 @@ body{
     background-color: black;
     width: 100%;
     top: 0;
-    height: 50px;
+    height: 5%;
 }
 
 .navbar{
@@ -29,12 +30,12 @@ body{
 
 .nav-icons{
     display: flex;
-    gap: 50px;
+    gap: 5%;
     width: 100%;
     justify-content: end;
-    margin-right: 10px;
-    margin-top: 10px;
-    padding: 20px 100px 0 500px
+    margin-right: 1%;
+    margin-top: 0.8%;
+    padding: 1% 5% 0 20%;
 }
 
 a{
@@ -50,24 +51,23 @@ a:hover{
 }
 
 .nav-img{
-    height: 70px;
-    width: 70px;
-    overflow: hidden;
+    height: 10%;
+    width: 5%;
 }
 
 .nav-img-1{
     transform: scale(0.05);
     transform-origin: top left;
     padding-top: 0;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin: 15% 0 0 30%;
 }
 
 .center-text{
-    height: 150px;
-    width: 750px;
+    height: 18%;
+    width: 55%;
     padding: 0;
-    margin: 320px 0 0 200px;
+    margin: 16% 0 0 10%;
+    overflow: hidden;
 }
 
 .i-am{
@@ -79,8 +79,8 @@ a:hover{
 }
 
 .name{
-    padding-left: 10px;
-    font-size: 100px;
+    padding-left: 1%;
+    font-size: 700%;
     font-weight: 600;
     letter-spacing: 3px;
     font-family: "Montserrat", sans-serif;
@@ -91,10 +91,11 @@ a:hover{
 }
 
 .center-desc{
-    padding: 20px;
-    height: 200px;
-    width: 1200px;
-    margin:0 0 0 200px;
+    background-color: transparent;
+    padding: 1% 0 1% 1%;
+    height: 25%;
+    width: 70%;
+    margin:0 0 0 10%;
 }
 
 .cent-desc{
@@ -107,21 +108,21 @@ a:hover{
 }
 
 .contacts{
-    margin: 300px 0 100px 300px;
-    width: 1200px;
-    height: 120px;
+    margin: 10% 0 50% 15%;
+    width: 70%;
+    height: 12%;
     background-color: none;
 }
 
 button{
-    width: 280px;
-    height: 80px;
+    width: 80%;
+    height: 300%;
     background-color: black;
     color: rgb(240, 240, 240);
     text-decoration: none;
     font-family: "Inter", sans-serif;
     font-weight:bolder;
-    font-size: 20px;
+    font-size: 125%;
     display: inline-block;
     text-align: center;
     transition: all 0.5s;
@@ -147,7 +148,7 @@ button::after, button::before{
     left: 50%;
     translate: -50% -50%;
     z-index: -1;
-    padding: 4px;
+    padding: 1%;
     border-radius: 15px;
     animation: spin 6s linear infinite;
 }
@@ -167,7 +168,7 @@ button::before{
 }
 
 .button-all{
-    padding: 20px 10px 20px 10px;
+    padding: 1% 1% 5% 1%;
     display: grid;
     grid-template-columns: auto auto auto auto;
     column-gap: 30px;
