@@ -17,8 +17,8 @@ body{
     width: 100%;
     background-color: black;
 }
+
 .header{
-    background-color: black;
     width: 100%;
     top: 0;
     height: 5%;
@@ -26,6 +26,7 @@ body{
 
 .navbar{
     display: flex;
+    height: 200%;
 }
 
 .nav-icons{
@@ -64,7 +65,7 @@ a:hover{
 
 .center-text{
     height: 18%;
-    width: 55%;
+    width: 44.4%;
     padding: 0;
     margin: 16% 0 0 10%;
     overflow: hidden;
@@ -122,48 +123,162 @@ button{
     text-decoration: none;
     font-family: "Inter", sans-serif;
     font-weight:bolder;
-    font-size: 125%;
+    font-size: 115%;
     display: inline-block;
     text-align: center;
     transition: all 0.5s;
     cursor: pointer;
     position: relative;
-    border-radius: 15px;
+    border-radius: 10px;
     border: none;
 }
 
-@property --angle{
+@property --angle1{
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
 }
 
-button::after, button::before{
+@property --angle2{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@property --angle3{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@property --angle4{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+/* BUTTON #1 */
+
+.button1::after, .button1::before{
     position: absolute;
     content: '';
     height: 100%;
     width: 100%;
-    background-image: conic-gradient(from var(--angle), transparent 45%, #9845E8, #33D2FF);
+    background-image: conic-gradient(from var(--angle1), #9259F7, #8E5DF6, #8862F5, #806BF4, #7575F2, #3BADE9, #23C4E5, #15D2E3, #10D7E2, #9259F7);
     top: 50%;
     left: 50%;
     translate: -50% -50%;
     z-index: -1;
-    padding: 1%;
-    border-radius: 15px;
-    animation: spin 6s linear infinite;
+    padding: 1.8%;
+    border-radius: 10px;
+    animation: spin1 2s linear infinite;
 }
 
-button::before{
+.button1::before{
     filter: blur(0.8rem);
-    opacity: 0.5;
+    opacity: 0.2;
 }
 
-@keyframes spin{
+/* BUTTON #2 */
+
+.button2::after, .button2::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle2), #6964DE,#FCA6E9, #6964DE);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 1.8%;
+    border-radius: 10px;
+    animation: spin2 2s linear infinite;
+}
+
+.button2::before{
+    filter: blur(0.8rem);
+    opacity: 0.2;
+}
+
+/* BUTTON #3 */
+
+.button3::after, .button3::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle3),#F4426C, #FBF2B1, #F4426C );
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 1.8%;
+    border-radius: 10px;
+    animation: spin3 2s linear infinite;
+}
+
+.button3::before{
+    filter: blur(0.8rem);
+    opacity: 0.2;
+}
+
+/* BUTTON #4 */
+
+.button4::after, .button4::before{
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle4), #D24074, #6518B4, #D24074 );
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 1.8%;
+    border-radius: 10px;
+    animation: spin4 2s linear infinite;
+}
+
+.button4::before{
+    filter: blur(0.8rem);
+    opacity: 0.2;
+}
+
+
+@keyframes spin1{
     from{
-        --angle: 0deg;
+        --angle1: 0deg;
     }
     to{
-        --angle: 360deg;
+        --angle1: 360deg;
+    }
+}
+
+@keyframes spin2{
+    from{
+        --angle2: 0deg;
+    }
+    to{
+        --angle2: 360deg;
+    }
+}
+
+@keyframes spin3{
+    from{
+        --angle3: 0deg;
+    }
+    to{
+        --angle3: 360deg;
+    }
+}
+
+@keyframes spin4{
+    from{
+        --angle4: 0deg;
+    }
+    to{
+        --angle4: 360deg;
     }
 }
 
